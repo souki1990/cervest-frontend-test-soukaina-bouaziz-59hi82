@@ -56,7 +56,7 @@ return(
       <h4>4. Card</h4>
       <Card days = {daysOverThreeShold} />
     </div> }
-    {error && <h3> {error}</h3>}
+    {error && <h3> Something went wrong</h3>}
     </div> 
 )
 };

@@ -12,6 +12,7 @@ const getData = async () => {
     let data = await response.json();
     return data;
   } catch (error) {
+    //TODO api response
     return { error };
   }
 };
