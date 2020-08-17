@@ -12,7 +12,7 @@ const getData = async () => {
     let data = await response.json();
     return data;
   } catch (error) {
-    //TODO api response
+    //TODO manage error message! api statusText?
     return { error };
   }
 };
