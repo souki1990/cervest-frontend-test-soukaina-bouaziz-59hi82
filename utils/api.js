@@ -7,13 +7,12 @@ const getData = async () => {
     );
 
     if (!response.ok) {
-      throw { error: response.statusText };
+      throw new Error({ status: response.statusText });
     }
     let data = await response.json();
     return data;
   } catch (error) {
-    console.log(error);
-    return { error: error };
+    return { error };
   }
 };
 

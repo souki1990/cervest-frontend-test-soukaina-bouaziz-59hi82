@@ -1,4 +1,4 @@
-import React, { Component ,useRef, useEffect, useState, memo } from "react";
+import React, { Component ,useRef, useEffect, useState } from "react";
 import Chartjs from "chart.js";
 
 const chartConfigOptions = {
@@ -12,7 +12,10 @@ const chartConfigOptions = {
                     stepSize:2
                 }
             }]
-        }
+        },
+        animation: {
+          duration: 0
+      }
     }
 }
 

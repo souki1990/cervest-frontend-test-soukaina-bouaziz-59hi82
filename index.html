@@ -1,6 +1,13 @@
 <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="preload" 
+    as="style"
+    href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" onload="this.rel='stylesheet'">
+    <link rel="preload" 
+    onload="this.rel='script'"
+    href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
+    <link rel="preload" 
+    as="image"
+    href="https://s3-eu-west-1.amazonaws.com/cervest-website-media/wp-content/uploads/20181026100009/CervestLogo.svg">
 </head>
 <body>
   <div id="root"></div>

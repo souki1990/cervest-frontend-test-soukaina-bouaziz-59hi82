@@ -17,12 +17,16 @@ const App = () => {
 const [data, setData ] = useState();
 const [processedData, setProcessedData ] = useState();
 const [daysOverThreeShold,setDaysOverThreeShold] = useState()
+const [error,setError] = useState();
 
 const loadData = async() => {
 const data = await getData();
-if(!data.error) {
-  setData(data);
- }
+  if (!data.error) {
+    setData(data);
+  }
+  else {
+    setError(data.error)
+  }
 }
 
 useEffect(() => {
@@ -42,7 +46,7 @@ loadData();
 return(
   <div>
     <Appbar />
-    <div className="container">
+    {!error && <div className="container">
       <h4>1. Table</h4>
      { processedData && <Table data={processedData}/>}
       <h4>2. Chart</h4>
@@ -51,8 +55,9 @@ return(
       <AlertShowcase />
       <h4>4. Card</h4>
       <Card days = {daysOverThreeShold} />
-    </div>
-  </div>
+    </div> }
+    {error && <h3> {error}</h3>}
+    </div> 
 )
 };
 
