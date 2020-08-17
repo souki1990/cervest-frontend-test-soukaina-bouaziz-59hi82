@@ -3,7 +3,7 @@
 const toTableFormat = (rawData) => {
   return rawData.reduce((acc, curr) => {
     let dataByDate = curr.data;
-    acc.labels.push(new Date(curr.date).toLocaleDateString('en-GB'));
+    acc.labels.push(new Date(curr.date * 1000).toLocaleDateString('en-GB'));
     dataByDate.forEach((measure) => {
       if (!acc.regions[measure.region]) {
                 acc.regions[measure.region] = [];

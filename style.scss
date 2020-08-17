@@ -4,6 +4,10 @@ h1,
 p {
   font-family: $default-font-family;
 }
+.nav-wrapper {
+  display:flex;
+  justify-content: center;
+}
 
 .alert-bar .row {
   display: grid;
@@ -50,10 +54,6 @@ p {
   .card-content {
     text-align: center;
   }
-}
-
-.brand-logo {
-   padding-left: 0.1em;
 }
 
 $color-gray: #eeeeee;
