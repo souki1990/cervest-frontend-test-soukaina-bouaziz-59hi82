@@ -1,0 +1,56 @@
+@import "variables";
+
+h1,
+p {
+  font-family: $default-font-family;
+}
+
+.alert-bar .row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
+  column-gap: 5%;
+  row-gap: 10px;
+  grid-auto-flow: column;
+}
+
+.badge {
+  border: solid 2px;
+  border-radius: $default-border-radius;
+  padding: 7px;
+  border-color: rgb(208, 208, 208);
+  background-color: $color-gray;
+}
+
+.success {
+  background-color: $color-green;
+  border-color: rgb(164, 179, 162);
+}
+
+.danger {
+  background-color: $color-red;
+  border-color: rgb(212, 185, 158);
+}
+
+.warning {
+  background-color: $color-yellow;
+  border-color: rgb(217, 212, 182);
+}
+
+.round {
+  border-radius: $round-border-radius;
+}
+
+.shadow {
+  box-shadow: 0 5px 2px -2px gray;
+  border-bottom-width: 1px;
+}
+
+.card_component {
+  .card-content {
+    text-align: center;
+  }
+}
+
+$color-gray: #eeeeee;
+$default-border-radius: 5px;
